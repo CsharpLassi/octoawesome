@@ -336,10 +336,10 @@ namespace OctoAwesome
                     }
                     else
                     {
+                        simulation.RemoveEntity(entity.Entity);
                         targetchunk = loadDelegate(entity.CurrentPlanet, entity.TargetChunk);
                         targetchunk.Entities.Add(entity.Entity);
                         saveDelegate(entity.CurrentPlanet, entity.TargetChunk, targetchunk);
-                        simulation.RemoveEntity(entity.Entity);
                     }
                 }
 
